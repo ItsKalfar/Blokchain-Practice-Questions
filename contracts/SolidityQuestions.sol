@@ -19,9 +19,10 @@ contract CheckAddress {
     }
 }
 
-// Write a Solidity function to transfer tokens from one address to another.
+// Write a Solidity function to transfer ERC20 tokens from one address to another.
+// Works only if the sender has been approved
 
-contract TransferFunds {
+contract TransferTokens {
     function transferTokens(
         address _token,
         address _to,
@@ -49,7 +50,7 @@ contract TransferFunds {
 error NotOwner();
 error NotEnoughETH();
 
-contract A {
+contract TransferFunds {
     address public owner;
 
     constructor() {
